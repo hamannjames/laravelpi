@@ -12,5 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $people = [
+        "James",
+        "Jesse",
+        'Jaelle'
+    ];
+
+    return view('welcome', compact('people'));
 });
