@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Companies extends Migration
+class Owners extends Migration
 {
     /**
      * Run the migrations.
@@ -14,13 +14,13 @@ class Companies extends Migration
     public function up()
     {
         //
-        Schema::create('companies', function(Blueprint $table){
+        Schema::create('owners', function(Blueprint $table){
 
             $table->increments('id');
             $table->string('name', 100);
-            $table->string('address', 100);
-            $table->string('phone', 100);
             $table->string('email', 100);
+            $table->string('FRID', 100);
+            $table->string('CRM_ID', 100);
             $table->timestamps();
 
         });
@@ -34,6 +34,6 @@ class Companies extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('companies');
+        Schema::dropIfExists('owners');
     }
 }

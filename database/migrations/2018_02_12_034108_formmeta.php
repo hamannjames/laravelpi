@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Pledges extends Migration
+class Formmeta extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,6 @@ class Pledges extends Migration
     public function up()
     {
         //
-        Schema::create('pledges', function(Blueprint $table){
-
-            $table->increments('id');
-            $table->timestamps();
-
-        });
     }
 
     /**
@@ -30,6 +24,5 @@ class Pledges extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('pledges');
     }
 }

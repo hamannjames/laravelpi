@@ -14,6 +14,12 @@ class Accounts extends Migration
     public function up()
     {
         //
+        Schema::create('accounts', function(Blueprint $table){
+
+            $table->increments('id');
+            $table->timestamps();
+
+        });
     }
 
     /**
@@ -24,5 +30,6 @@ class Accounts extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('accounts');
     }
 }
